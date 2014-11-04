@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html ng-app="TjApp">
+<head>
+  <!-- META -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!--Optimize mobile viewport -->
+
+  <title>Thomas Jeon</title>
+
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+
+  <script src="/bower_components/jquery/jquery.min.js"></script><!-- load jquery -->
+  <script src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+  <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="/bower_components/angular-route/angular-route.min.js"></script>
+  <script src="/js/controllers/controllers.js"></script>
+  <script src="/js/core.js"></script>
+
+  <script src="//use.typekit.net/cfn4lzu.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
+</head>
+<!-- SET CONTROLLER AND GET ALL TODOS -->
+<body>
+
+  <div class="view-container">
+    <div ng-view class="view-frame"></div>
+  </div>
+
+</body>
+</html>
+

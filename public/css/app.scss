@@ -1,0 +1,93 @@
+@import 'constants';
+
+html, body, .view-container, .view-frame{
+  margin: 0;
+  padding: 0;
+  font-family: "museo-slab";
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+  background-color: $light-blue;
+}
+
+.landing-container{
+  padding-top: 70px;
+
+  .header{
+    text-align: center;
+  }
+
+  .divider-container{
+    height: 2px;
+  }
+
+  .divider-black{
+    width: 550px;
+    margin: auto;
+    border-bottom: 2px solid;
+
+    &.ng-hide{
+      width: 0;
+    }
+  }
+
+  .divider-black.ng-hide-add.ng-hide-add-active,
+  .divider-black.ng-hide-remove.ng-hide-remove-active{
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+  }
+}
+
+.main-content{
+  text-align: center;
+  margin-top: 70px;
+
+  .content-block-container{
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    display: inline-block;
+  }
+
+  .content-block{
+    width: 400px;
+    height: 400px;
+    vertical-align: top;
+    overflow: hidden;
+    cursor: pointer;
+
+    &.ng-hide{
+      margin: 275px;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .content-block.ng-hide-add.ng-hide-add-active,
+  .content-block.ng-hide-remove.ng-hide-remove-active{
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+  }
+
+  .resume{
+    background-color: $grey;
+    color: $white;
+
+    .resume-img{
+      width: 300px;
+    }
+  }
+
+  .projects{
+    background-color: $white;
+    color: $grey;
+  }
+
+  .block-header{
+    margin: 40px 0;
+  }
+}

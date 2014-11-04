@@ -1,0 +1,8 @@
+.DS_Store
+.DS_Store?
+._*
+.sass-cache
+
+assets/
+node_modules/
+bower_components/
