@@ -1,6 +1,7 @@
 'user strict';
 
 var TjApp = angular.module('TjApp', [
+  'TjAppAnimations',
   'TjAppControllers',
   'ngRoute'
 ]);
