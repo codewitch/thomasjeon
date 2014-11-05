@@ -7,32 +7,41 @@ html, body, .view-container, .view-frame{
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
-  background-color: $light-blue;
+  background-color: $grey;
+  color: $white;
 }
 
-.landing-container{
-  padding-top: 70px;
+.main-content{
+  text-align: center;
+}
+
+.header-container{
+  padding: 70px 0;
 
   .header{
     text-align: center;
+  }
+
+  .header-bottom-wrapper{
+    height: 32px;
   }
 
   .divider-container{
     height: 2px;
   }
 
-  .divider-black{
+  .divider-white{
     width: 550px;
     margin: auto;
     border-bottom: 2px solid;
+    color: $white;
 
     &.ng-hide{
       width: 0;
     }
   }
 
-  .divider-black.ng-hide-add.ng-hide-add-active,
-  .divider-black.ng-hide-remove.ng-hide-remove-active{
+  .divider-white.ng-hide-remove.ng-hide-remove-active{
     -webkit-transition: 0.5s linear all;
     -moz-transition: 0.5s linear all;
     -o-transition: 0.5s linear all;
@@ -58,7 +67,6 @@ html, body, .view-container, .view-frame{
     }
   }
 
-  .social-link.ng-hide-add.ng-hide-add-active,
   .social-link.ng-hide-remove.ng-hide-remove-active{
     -webkit-transition: 0.5s linear all;
     -moz-transition: 0.5s linear all;
@@ -67,46 +75,161 @@ html, body, .view-container, .view-frame{
   }
 }
 
-.main-content{
-  text-align: center;
-  margin-top: 50px;
-
-  .content-block-container{
-    width: 400px;
-    height: 400px;
-    margin: 20px;
-    display: inline-block;
-  }
+.content-block-container{
+  width: 700px;
+  height: 200px;
+  margin: auto;
+  margin-bottom: 30px;
+  display: block;
+  cursor: pointer;
+  vertical-align: top;
 
   .content-block{
     width: 100%;
     height: 100%;
     vertical-align: top;
     overflow: hidden;
-    cursor: pointer;
 
-    &.ng-hide{
-      margin: 275px;
-      width: 0;
-      height: 0;
+    .block-header{
+      margin: 40px 70px 40px 0;
+      display: inline-block;
+      vertical-align: top;
     }
+
   }
 
   .resume{
-    background-color: $grey;
+    background-color: $light-blue;
     color: $white;
 
     .resume-img{
       width: 300px;
+      margin-bottom: 40px;
     }
   }
 
   .projects{
     background-color: $white;
     color: $grey;
+
+    .block-inner-content{
+      width: 300px;
+      margin-bottom: 40px;
+    }
   }
 
-  .block-header{
-    margin: 40px 0;
+  .about{
+    background-color: $white;
+    color: $grey;
+
+    .block-inner-content{
+      width: 300px;
+      margin-bottom: 40px;
+    }
   }
+}
+
+.main-content{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  .header-container{
+    position: relative;
+    top: 0;
+
+    &.ng-hide{
+      top: -220px;
+    }
+  }
+
+  .resume-container{
+    position: relative;
+    top: 0;
+
+    &.ng-hide{
+      top: -220px;
+    }
+  }
+
+  .projects-container, .about-container{
+    position: relative;
+    top: 0;
+
+    &.ng-hide{
+    }
+  }
+}
+
+.block-zoom,
+.block-zoom-add.block-zoom-add-active{
+  width: 100% !important;
+  height: 100% !important;
+  margin-bottom: 0 !important;
+
+  &.block-zoom-add-active{
+    top: -220px !important;
+
+    &.resume-container{
+    }
+
+    &.projects-container{
+    }
+  }
+
+  &>.content-block{
+
+    &>.block-header{
+      font-size: 40px;
+      margin-top: 70px;
+    }
+
+    &>.block-inner-content{
+      width: 700px;
+    }
+  }
+}
+
+.content-block-container.ng-hide-add.ng-hide-add-active,
+.content-block-container.ng-hide-remove.ng-hide-remove-active,
+.header-container.ng-hide-add.ng-hide-add-active,
+.header-container.ng-hide-remove.ng-hide-remove-active,
+.block-zoom-add, .block-zoom-remove,
+.block-hide-add, .block-hide-remove,
+.resume-img, .block-header{
+  -webkit-transition: 0.75s cubic-bezier(0,.38,.49,1) all;
+  -moz-transition: 0.75s cubic-bezier(0,.38,.49,1) all;
+  -o-transition: 0.75s cubic-bezier(0,.38,.49,1) all;
+  transition: 0.75s cubic-bezier(0,.38,.49,1) all;
+}
+
+.block-zoom-remove.block-zoom-remove-active{
+}
+
+.block-hide,
+.block-hide-add.block-hide-add-active{
+}
+
+.block-hide-remove.block-hide-remove-active{
+}
+
+.arrow-left-white {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid $white;
+}
+
+.arrow-left-grey {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid $grey;
+}
+
+.back-arrow{
+  cursor: pointer;
 }
