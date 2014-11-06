@@ -27,7 +27,7 @@
     "morgan"      : "~1.2.2",
     "body-parser" : "~1.5.2",
     "method-override" : "~2.1.2",
-    "ejs" : "~0.8.",
+    "ejs" : "~0.8.5",
 
     "karma": "^0.12.16",
     "karma-chrome-launcher": "^0.1.4",
