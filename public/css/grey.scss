@@ -1,0 +1,19 @@
+@import 'constants';
+
+html, body, .view-container, .view-frame{
+  background-color: $grey;
+  color: $white;
+}
+
+.landing-container{
+  .divider-black{
+    color: $white;
+  }
+}
+
+.content-block{
+
+  &.resume{
+    background-color: $light-blue;
+  }
+}

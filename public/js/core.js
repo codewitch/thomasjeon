@@ -2,6 +2,8 @@
 
 var TjApp = angular.module('TjApp', [
   'TjAppControllers',
+  'TjAppAnimations',
+  'TjAppDirectives',
   'ngRoute'
 ]);
 

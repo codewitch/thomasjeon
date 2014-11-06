@@ -78,60 +78,101 @@ html, body, .view-container, .view-frame {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
-  background-color: #7ebae5; }
-
-.landing-container {
-  padding-top: 70px; }
-  .landing-container .header {
-    text-align: center; }
-  .landing-container .divider-container {
-    height: 2px; }
-  .landing-container .divider-black {
-    width: 550px;
-    margin: auto;
-    border-bottom: 2px solid; }
-    .landing-container .divider-black.ng-hide {
-      width: 0; }
-  .landing-container .divider-black.ng-hide-add.ng-hide-add-active,
-  .landing-container .divider-black.ng-hide-remove.ng-hide-remove-active {
-    -webkit-transition: 0.5s linear all;
-    -moz-transition: 0.5s linear all;
-    -o-transition: 0.5s linear all;
-    transition: 0.5s linear all; }
+  background-color: #b6b6be;
+  color: #ffffff; }
 
 .main-content {
-  text-align: center;
-  margin-top: 70px; }
-  .main-content .content-block-container {
-    width: 400px;
-    height: 400px;
-    margin: 20px;
-    display: inline-block; }
-  .main-content .content-block {
-    width: 400px;
-    height: 400px;
-    vertical-align: top;
-    overflow: hidden;
-    cursor: pointer; }
-    .main-content .content-block.ng-hide {
-      margin: 275px;
-      width: 0;
-      height: 0; }
-  .main-content .content-block.ng-hide-add.ng-hide-add-active,
-  .main-content .content-block.ng-hide-remove.ng-hide-remove-active {
+  text-align: center; }
+
+.header-container {
+  padding: 75px 0; }
+  .header-container .header {
+    text-align: center; }
+  .header-container .header-bottom-wrapper {
+    height: 32px; }
+  .header-container .divider-container {
+    height: 2px; }
+  .header-container .divider-white {
+    width: 550px;
+    margin: auto;
+    border-bottom: 2px solid;
+    color: #ffffff; }
+    .header-container .divider-white.ng-hide {
+      width: 0; }
+  .header-container .divider-white.ng-hide-remove.ng-hide-remove-active {
     -webkit-transition: 0.5s linear all;
     -moz-transition: 0.5s linear all;
     -o-transition: 0.5s linear all;
     transition: 0.5s linear all; }
-  .main-content .resume {
-    background-color: #b6b6be;
+  .header-container .social-link-wrapper {
+    text-align: center;
+    margin-top: 10px;
+    height: 20px; }
+    .header-container .social-link-wrapper .social-link {
+      padding: 0 10px;
+      opacity: 1; }
+      .header-container .social-link-wrapper .social-link svg {
+        width: 16px; }
+      .header-container .social-link-wrapper .social-link.ng-hide {
+        opacity: 0; }
+  .header-container .social-link.ng-hide-remove.ng-hide-remove-active {
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all; }
+
+.block-placeholder {
+  width: 700px;
+  height: 200px;
+  margin: auto;
+  margin-bottom: 30px;
+  overflow: hidden; }
+  .block-placeholder .block-page-wrapper {
+    width: 700px;
+    height: 200px;
+    overflow: hidden; }
+    .block-placeholder .block-page-wrapper .block-header {
+      margin: 80px 70px 40px 0;
+      display: inline-block;
+      vertical-align: top; }
+  .block-placeholder .resume {
+    background-color: #7ebae5;
     color: #ffffff; }
-    .main-content .resume .resume-img {
-      width: 300px; }
-  .main-content .projects {
+    .block-placeholder .resume .resume-img {
+      width: 300px;
+      margin-bottom: 40px;
+      margin-top: 40px; }
+  .block-placeholder .projects {
     background-color: #ffffff;
     color: #b6b6be; }
-  .main-content .block-header {
-    margin: 40px 0; }
+    .block-placeholder .projects .block-inner-content {
+      width: 300px;
+      margin-bottom: 40px;
+      margin-top: 40px; }
+  .block-placeholder .about {
+    background-color: #f5cf33;
+    color: #ffffff; }
+    .block-placeholder .about .block-inner-content {
+      width: 300px;
+      margin-bottom: 40px;
+      margin-top: 40px; }
+
+.arrow-left-white {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid #ffffff; }
+
+.arrow-left-grey {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid #b6b6be; }
+
+.back-arrow {
+  cursor: pointer;
+  position: absolute; }
 
 /*# sourceMappingURL=app.css.map */
