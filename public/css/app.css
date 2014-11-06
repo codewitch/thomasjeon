@@ -168,6 +168,8 @@ html, body, .view-container, .view-frame {
       width: 100%;
       margin-bottom: 40px;
       margin-top: 40px; }
+    .block-placeholder .about .about-gif {
+      width: 350px; }
 
 .block-zoom-content {
   opacity: 0;
