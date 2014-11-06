@@ -15,15 +15,21 @@
     </div>
 
     <div class="block-placeholder resume-placeholder"
-      ng-click="showBlock('resume')">
+      ng-click="showBlock('resume'); arrowShow=true">
       <div class="block-page-wrapper resume-wrapper">
         <div class="block-page resume">
-          <div class="arrow-left-white back-arrow"
-            ng-click="hideBlock('resume'); $event.stopPropagation();"></div>
-          <h2 class="block-header">
-            RESUME
-          </h2>
-          <img ng-src="{{resumeImg}}" class="resume-img block-inner-content">
+          <div class="page-left">
+            <div class="page-header-wrapper">
+              <h2 class="block-header">
+                RESUME
+              </h2>
+              <div class="arrow-left-white back-arrow" ng-show="arrowShow"
+                ng-click="hideBlock('resume'); arrowShow=false; $event.stopPropagation();"></div>
+            </div>
+          </div>
+          <div class='page-right'>
+            <img ng-src="{{resumeImg}}" class="resume-img block-inner-content">
+          </div>
         </div>
       </div>
     </div>
@@ -32,12 +38,18 @@
       ng-click="showBlock('projects')">
       <div class="block-page-wrapper projects-wrapper">
         <div class="block-page projects">
-          <div class="arrow-left-grey back-arrow"
-            ng-click="hideBlock('projects'); $event.stopPropagation();"></div>
-          <h2 class="block-header">
-            PROJECTS
-          </h2>
-          <img ng-src="{{resumeImg}}" class="resume-img block-inner-content">
+          <div class="page-left">
+            <div class="page-header-wrapper">
+              <h2 class="block-header">
+                PROJECTS
+              </h2>
+              <div class="arrow-left-grey back-arrow"
+                ng-click="hideBlock('projects'); $event.stopPropagation();"></div>
+            </div>
+          </div>
+          <div class="page-right">
+            <img ng-src="{{resumeImg}}" class="resume-img block-inner-content">
+          </div>
         </div>
       </div>
     </div>
@@ -46,12 +58,18 @@
       ng-click="showBlock('about')">
       <div class="block-page-wrapper about-wrapper">
         <div class="block-page about">
-          <div class="arrow-left-grey back-arrow"
-            ng-click="hideBlock('about'); $event.stopPropagation();"></div>
-          <h2 class="block-header">
-            ABOUT ME
-          </h2>
-          <img ng-src="{{resumeImg}}" class="resume-img block-inner-content">
+          <div class="page-left">
+            <div class="page-header-wrapper">
+              <h2 class="block-header">
+                ABOUT ME
+              </h2>
+              <div class="arrow-left-grey back-arrow"
+                ng-click="hideBlock('about'); $event.stopPropagation();"></div>
+            </div>
+          </div>
+          <div class="page-right">
+            <img ng-src="{{resumeImg}}" class="resume-img block-inner-content">
+          </div>
         </div>
       </div>
     </div>

@@ -11,10 +11,7 @@ TjAppControllers.controller('landingController', [
     $scope.socialShow1 = false;
     $scope.socialShow2 = false;
 
-    $scope.mainShow = true;
-    $scope.resumeShow = true;
-    $scope.projectsShow = true;
-    $scope.aboutShow = true;
+    $scope.arrowShow = false;
 
     $scope.resumeImg = "images/resume-flat.png";
 

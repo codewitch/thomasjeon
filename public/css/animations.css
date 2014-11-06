@@ -6,14 +6,17 @@
   .main-content .block-placeholder .block-page-wrapper {
     position: absolute; }
 
-.zoom-in > .block-page > .block-header {
-  font-size: 40px; }
-.zoom-in > .block-page > .block-inner-content {
-  width: 700px; }
+.zoom-in .block-page .page-left {
+  width: 300px; }
+  .zoom-in .block-page .page-left .block-header {
+    font-size: 40px; }
+.zoom-in .block-page .block-inner-content {
+  min-width: 600px;
+  max-width: 1000px; }
 
 .header-container.ng-hide-add.ng-hide-add-active,
 .header-container.ng-hide-remove.ng-hide-remove-active,
-.resume-img, .block-header,
+.resume-img, .block-header, .page-left, .page-right,
 .hide-up-add, .hide-up-remove, .hide-down-add, .hide-down-remove,
 .zoom-in-add, .zoom-in-remove {
   -webkit-transition: 0.75s cubic-bezier(0, 0.38, 0.49, 1) all;
