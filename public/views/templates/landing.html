@@ -1,54 +1,58 @@
 <link rel="stylesheet" href="css/{{params.version}}.css">
+<link rel="stylesheet" href="css/animations.css">
 <div class="landing-container">
 
   <div class="main-content">
-    <div class="header-container"
-      ng-class="mainBlockDisplay"
-      ng-show="mainShow">
-      <h1 class="header">
-        THOMAS, TOM & TOMMY
-      </h1>
-      <div class="header-bottom-wrapper">
-        <header-bottom></header-bottom>
+    <div class="block-placeholder header-placeholder">
+      <div class="header-container">
+        <h1 class="header">
+          THOMAS, TOM & TOMMY
+        </h1>
+        <div class="header-bottom-wrapper">
+          <header-bottom></header-bottom>
+        </div>
       </div>
     </div>
 
-    <div class="content-block-container resume-container"
-      ng-class="resumeBlockDisplay" ng-click="showBlock('resume')"
-      ng-show="resumeShow">
-      <div class="content-block resume">
-        <div class="arrow-left-white back-arrow"
-          ng-click="hideBlock('resume'); $event.stopPropagation();"></div>
-        <h2 class="block-header" ng-click="resumeBlockEnter=''">
-          RESUME
-        </h2>
-        <img ng-src="{{resumeImg}}" class="resume-img block-inner-content">
+    <div class="block-placeholder resume-placeholder"
+      ng-click="showBlock('resume')">
+      <div class="block-page-wrapper resume-wrapper">
+        <div class="block-page resume">
+          <div class="arrow-left-white back-arrow"
+            ng-click="hideBlock('resume'); $event.stopPropagation();"></div>
+          <h2 class="block-header">
+            RESUME
+          </h2>
+          <img ng-src="{{resumeImg}}" class="resume-img block-inner-content">
+        </div>
       </div>
     </div>
 
-    <div class="content-block-container projects-container"
-      ng-class="projectsBlockDisplay" ng-click="showBlock('projects')"
-      ng-show="projectsShow">
-      <div class="content-block projects">
-        <div class="arrow-left-grey back-arrow"
-          ng-click="hideBlock('projects'); $event.stopPropagation();"></div>
-        <h2 class="block-header">
-          PROJECTS
-        </h2>
-        <img ng-src="{{resumeImg}}" class="resume-img block-inner-content">
+    <div class="block-placeholder projects-placeholder"
+      ng-click="showBlock('projects')">
+      <div class="block-page-wrapper projects-wrapper">
+        <div class="block-page projects">
+          <div class="arrow-left-grey back-arrow"
+            ng-click="hideBlock('projects'); $event.stopPropagation();"></div>
+          <h2 class="block-header">
+            PROJECTS
+          </h2>
+          <img ng-src="{{resumeImg}}" class="resume-img block-inner-content">
+        </div>
       </div>
     </div>
 
-    <div class="content-block-container about-container"
-      ng-class="aboutBlockDisplay" ng-click="showBlock('about')"
-      ng-show="aboutShow">
-      <div class="content-block about">
-        <div class="arrow-left-grey back-arrow"
-          ng-click="hideBlock('about'); $event.stopPropagation();"></div>
-        <h2 class="block-header">
-          ABOUT ME
-        </h2>
-        <img ng-src="{{resumeImg}}" class="resume-img block-inner-content">
+    <div class="block-placeholder about-placeholder"
+      ng-click="showBlock('about')">
+      <div class="block-page-wrapper about-wrapper">
+        <div class="block-page about">
+          <div class="arrow-left-grey back-arrow"
+            ng-click="hideBlock('about'); $event.stopPropagation();"></div>
+          <h2 class="block-header">
+            ABOUT ME
+          </h2>
+          <img ng-src="{{resumeImg}}" class="resume-img block-inner-content">
+        </div>
       </div>
     </div>
   </div>
