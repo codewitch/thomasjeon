@@ -11,16 +11,20 @@ TjAppSectionControllers.controller('projectController', [
         'class': 'dodo', 'external': true, 'link': 'http://dodotodo.herokuapp.com', 
         'imgFile': 'dodo.png'},
       {'title': 'Money Tree', 'description': 'Collect as many leaves as you can for $$$',
-        'class': 'money-tree', 'external': true, 'link': 'http://moneytree.venmo.com/',
-        'imgFile': ''},
+        'class': 'money-tree', 'external': false, 'link': '',
+        'imgFile': 'moneytree-leaf.png'},
       {'title': 'Splitlicious', 'description': 'Split your billzz',
-        'class': 'splitlicious', 'external': false, 'link': ''},
+        'class': 'splitlicious', 'external': false, 'link': '',
+        'imgFile': 'splitlicious.png'},
       {'title': 'LucasWeather', 'description': 'Lucas knows the weather',
-        'class': 'lucas-weather', 'external': false, 'link': ''},
+        'class': 'lucas-weather', 'external': false, 'link': '',
+        'imgFile': 'lucas.gif'},
       {'title': 'Venmo', 'description': 'Venmo homepage and Venmo donations',
-        'class': 'venmo', 'external': false, 'link': ''},
+        'class': 'venmo', 'external': false, 'link': '',
+        'imgFile': 'venmo.png'},
       {'title': 'VenmoSXSW 2014', 'description': 'Venmo stuff from SXSW that I created!',
-        'class': 'venmosxsw2014', 'external': false, 'link': ''}
+        'class': 'venmosxsw2014', 'external': false, 'link': '',
+        'imgFile': 'bull.png'}
     ];
   }]);
 

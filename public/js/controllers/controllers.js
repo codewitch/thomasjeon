@@ -170,7 +170,7 @@ TjAppControllers.controller('landingController', [
           top: $(document).scrollTop() + 'px',
           left: 0 + 'px',
           width: '100%',
-          height: '100%'
+          height: $(window).height() + 'px'
         }
       }).then(function(){
         $(document).scrollTop(0);
@@ -199,7 +199,7 @@ TjAppControllers.controller('landingController', [
           height: element.parent().height() + 'px',
           overflow: 'hidden',
           top: popElement.top + 'px',
-          left: ($(window).width()-element.parent().width())/2 + 'px'
+          left: element.parent().offset().left + 'px'
         }
       }).then(function(){
         element.css({

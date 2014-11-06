@@ -79,8 +79,7 @@ h1, h2, h3, p {
     width: 350px;
     height: 100px; }
     .block-placeholder .block-placeholder .block-page-wrapper .page-center {
-      display: inline-block;
-      height: 100px; }
+      display: inline-block; }
       .block-placeholder .block-placeholder .block-page-wrapper .page-center .block-header {
         font-size: 15px;
         margin-top: 41px; }
@@ -106,17 +105,17 @@ h1, h2, h3, p {
   .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper {
     width: 700px;
     height: 200px; }
-    .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center {
-      height: 200px; }
-      .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .project-logo {
-        height: 200px;
-        margin-right: 40px; }
-      .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .block-header {
-        font-size: 30px;
-        margin-top: 70px;
-        margin-bottom: 10px; }
-      .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .block-description {
-        font-size: 13px; }
+    .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .project-logo {
+      height: 200px;
+      margin-right: 40px; }
+    .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .block-header {
+      font-size: 30px;
+      margin-top: 70px;
+      margin-bottom: 10px; }
+    .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .block-description {
+      font-size: 13px; }
+    .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .project-content {
+      width: 100%; }
 
 .dodo {
   background-color: #6c748c; }

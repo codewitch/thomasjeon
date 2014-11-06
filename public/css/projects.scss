@@ -13,7 +13,6 @@
 
       .page-center{
         display: inline-block;
-        height: 100px;
 
         .block-header{
           font-size: 15px;
@@ -56,7 +55,6 @@
     height: 200px;
 
     .page-center{
-      height: 200px;
 
       .project-logo{
         height: 200px;
@@ -71,6 +69,10 @@
 
       .block-description{
         font-size: 13px;
+      }
+
+      .project-content{
+        width: 100%;
       }
     }
   }
