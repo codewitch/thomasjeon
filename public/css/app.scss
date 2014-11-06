@@ -96,8 +96,13 @@ html, body, .view-container, .view-frame{
         display: inline-block;
 
         .block-header{
-          margin-bottom: 40px;
+          margin-bottom: 20px;
           margin-top: 82px;
+        }
+
+        .section-description{
+          margin-bottom: 20px
+          ;
         }
       }
     }
@@ -106,6 +111,12 @@ html, body, .view-container, .view-frame{
       display: inline-block;
       vertical-align: top;
       width: 50%;
+
+      .block-inner-content{
+        width: 100%;
+        margin-bottom: 40px;
+        margin-top: 40px;
+      }
     }
   }
 
@@ -115,8 +126,6 @@ html, body, .view-container, .view-frame{
 
     .resume-img{
       width: 100%;
-      margin-bottom: 40px;
-      margin-top: 40px;
     }
   }
 
@@ -124,10 +133,8 @@ html, body, .view-container, .view-frame{
     background-color: $white;
     color: $grey;
 
-    .block-inner-content{
-      width: 100%;
-      margin-bottom: 40px;
-      margin-top: 40px;
+    .arrow-left{
+      border-right-color: $grey;
     }
   }
 
@@ -143,7 +150,12 @@ html, body, .view-container, .view-frame{
   }
 }
 
-.arrow-left-white {
+.block-zoom-content{
+  opacity: 0;
+  text-align: center;
+}
+
+.arrow-left{
   width: 0;
   height: 0;
   border-top: 15px solid transparent;
@@ -151,15 +163,13 @@ html, body, .view-container, .view-frame{
   border-right: 15px solid $white;
 }
 
-.arrow-left-grey {
-  width: 0;
-  height: 0;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-right: 15px solid $grey;
-}
-
 .back-arrow{
   cursor: pointer;
-  margin: auto;
+  display: inline-block;
+}
+
+p.back-arrow{
+  line-height: 31px;
+  margin-left: 10px;
+  vertical-align: top;
 }

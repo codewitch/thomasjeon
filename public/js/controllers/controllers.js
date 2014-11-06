@@ -6,16 +6,15 @@ TjAppControllers.controller('landingController', [
   '$scope', '$timeout', '$location', '$animate',
   function($scope, $timeout, $location, $animate) {
     $scope.headerLineShow = false;
-    $scope.resumeBlockEnter = '';
-    $scope.projectsBlockEnter = '';
     $scope.socialShow1 = false;
     $scope.socialShow2 = false;
-
-    $scope.arrowShow = false;
-
-    $scope.resumeImg = "images/resume-flat.png";
-
     $scope.params = $location.search();
+
+    $scope.mainSections = [
+      {'title': 'Resume', 'description': 'See what I\'ve been up to!', 'class': 'resume'},
+      {'title': 'Projects', 'description': 'Here\'s some stuff I\'ve done!', 'class': 'projects'},
+      {'title': 'About Me', 'description': 'Wanna know more about me?', 'class': 'about'}
+    ];
 
     $scope.$on('$viewContentLoaded', function(){
       $timeout(function(){
@@ -35,6 +34,10 @@ TjAppControllers.controller('landingController', [
       var upElements = zoomElement.prevAll();
       var downElements = zoomElement.nextAll();
 
+      if( $scope.zoomContains(zoomElement.children()) ){
+        return;
+      }
+
       upElements.each(function(){
         $scope.hideBlockUp($(this));
       });
@@ -45,14 +48,16 @@ TjAppControllers.controller('landingController', [
         $scope.hideBlockDown($(this));
       });
 
-      //change contents
-      $scope.resumeImg = "images/Resume - Thomas.Chang.Min.Jeon.png";
     };
 
     $scope.hideBlock = function(section){
       var zoomElement = $('.' + section + '-placeholder');
       var upElements = zoomElement.prevAll();
       var downElements = zoomElement.nextAll();
+
+      if(!$scope.zoomContainsTop(zoomElement.children())){
+        return;
+      }
 
       upElements.each(function(){
         $scope.showBlockDown($(this));
@@ -64,8 +69,6 @@ TjAppControllers.controller('landingController', [
         $scope.showBlockUp($(this));
       });
 
-      //change contents
-      $scope.resumeImg = "images/resume-flat.png";
     };
 
 /****Block Animation Helpers****/
@@ -132,7 +135,10 @@ TjAppControllers.controller('landingController', [
     };
 
     $scope.zoomBlockIn = function(element){
-      $scope.zoomStack.push({top: element.offset().top});
+      console.log('zoomin');
+
+      element.find('.block-zoom-content').first().fadeTo(500, 1, 'linear');
+      $scope.zoomStack.push({top: element.offset().top, element: element});
       $animate.addClass(element, 'zoom-in', {
         from:{
           top: element.offset().top + 'px',
@@ -153,9 +159,12 @@ TjAppControllers.controller('landingController', [
           overflow: 'visible'
         });
       });
+
     }
 
     $scope.zoomBlockOut = function(element){
+      console.log('zoomout');
+      element.find('.block-zoom-content').first().fadeTo(500, 0, 'linear');
       $animate.removeClass(element, 'zoom-in', {
         from: {
           top: '0px',
@@ -185,5 +194,26 @@ TjAppControllers.controller('landingController', [
     var hideDownLength = function(element){
       return $(window).height() - element.offset().top + $(document).scrollTop();
     };
+
+    $scope.zoomContains = function(element){
+      for (var i=0;i<$scope.zoomStack.length;i++){
+        if($($scope.zoomStack[i].element).attr('class') == element.attr('class')){
+          return true;
+        }
+      }
+      return false;
+    };
+
+    $scope.zoomContainsTop = function(element){
+      if($scope.zoomStack.length < 1)
+        return false;
+      var elementClass = element.attr('class');
+      var topElement = $scope.zoomStack[$scope.zoomStack.length-1].element;
+      var topClass = $(topElement).attr('class');
+      if(topClass == elementClass)
+        return true;
+      return false;
+    };
+
 }]);
 

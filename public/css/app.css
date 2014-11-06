@@ -138,26 +138,28 @@ html, body, .view-container, .view-frame {
       .block-placeholder .block-page-wrapper .page-left .page-header-wrapper {
         display: inline-block; }
         .block-placeholder .block-page-wrapper .page-left .page-header-wrapper .block-header {
-          margin-bottom: 40px;
+          margin-bottom: 20px;
           margin-top: 82px; }
+        .block-placeholder .block-page-wrapper .page-left .page-header-wrapper .section-description {
+          margin-bottom: 20px; }
     .block-placeholder .block-page-wrapper .page-right {
       display: inline-block;
       vertical-align: top;
       width: 50%; }
+      .block-placeholder .block-page-wrapper .page-right .block-inner-content {
+        width: 100%;
+        margin-bottom: 40px;
+        margin-top: 40px; }
   .block-placeholder .resume {
     background-color: #7ebae5;
     color: #ffffff; }
     .block-placeholder .resume .resume-img {
-      width: 100%;
-      margin-bottom: 40px;
-      margin-top: 40px; }
+      width: 100%; }
   .block-placeholder .projects {
     background-color: #ffffff;
     color: #b6b6be; }
-    .block-placeholder .projects .block-inner-content {
-      width: 100%;
-      margin-bottom: 40px;
-      margin-top: 40px; }
+    .block-placeholder .projects .arrow-left {
+      border-right-color: #b6b6be; }
   .block-placeholder .about {
     background-color: #f5cf33;
     color: #ffffff; }
@@ -166,22 +168,24 @@ html, body, .view-container, .view-frame {
       margin-bottom: 40px;
       margin-top: 40px; }
 
-.arrow-left-white {
+.block-zoom-content {
+  opacity: 0;
+  text-align: center; }
+
+.arrow-left {
   width: 0;
   height: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-right: 15px solid #ffffff; }
 
-.arrow-left-grey {
-  width: 0;
-  height: 0;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-right: 15px solid #b6b6be; }
-
 .back-arrow {
   cursor: pointer;
-  margin: auto; }
+  display: inline-block; }
+
+p.back-arrow {
+  line-height: 31px;
+  margin-left: 10px;
+  vertical-align: top; }
 
 /*# sourceMappingURL=app.css.map */

@@ -33,7 +33,8 @@
 
 .header-container.ng-hide-add.ng-hide-add-active,
 .header-container.ng-hide-remove.ng-hide-remove-active,
-.resume-img, .block-header, .page-left, .page-right,
+.resume-img, .block-header, .page-left, .page-right, .block-placeholder,
+.zoom-in-add .block-page-wrapper, .zoom-in-remove .block-page-wrapper,
 .hide-up-add, .hide-up-remove, .hide-down-add, .hide-down-remove,
 .zoom-in-add, .zoom-in-remove{
   -webkit-transition: 0.75s cubic-bezier(0,.38,.49,1) all;
