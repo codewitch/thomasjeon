@@ -19,8 +19,9 @@
     .page-left{
       width: 300px;
 
-      .block-header{
+      .page-header-wrapper .block-header{
         font-size: 40px;
+        margin-top: 150px;
       }
     }
 
@@ -36,6 +37,7 @@
 .resume-img, .block-header, .page-left, .page-right, .block-placeholder,
 .zoom-in-add .block-page-wrapper, .zoom-in-remove .block-page-wrapper,
 .hide-up-add, .hide-up-remove, .hide-down-add, .hide-down-remove,
+.project-logo,
 .zoom-in-add, .zoom-in-remove{
   -webkit-transition: 0.75s cubic-bezier(0,.38,.49,1) all;
   -moz-transition: 0.75s cubic-bezier(0,.38,.49,1) all;

@@ -86,8 +86,18 @@ h1, h2, h3, p {
         margin-top: 41px; }
       .block-placeholder .block-placeholder .block-page-wrapper .page-center .block-description {
         font-size: 7px; }
+      .block-placeholder .block-placeholder .block-page-wrapper .page-center .block-zoom-content {
+        margin-top: 20px; }
   .block-placeholder .block-placeholder .block-page {
     color: #ffffff; }
+
+.project-logo {
+  height: 100px;
+  margin-right: 20px; }
+
+.project-header {
+  display: inline-block;
+  vertical-align: top; }
 
 .zoom-in .block-page .block-inner-content .block-placeholder {
   width: 700px;
@@ -98,6 +108,9 @@ h1, h2, h3, p {
     height: 200px; }
     .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center {
       height: 200px; }
+      .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .project-logo {
+        height: 200px;
+        margin-right: 40px; }
       .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .block-header {
         font-size: 30px;
         margin-top: 70px;

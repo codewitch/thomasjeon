@@ -1,23 +1,28 @@
 <div ng-controller="projectController">
 <div class="block-placeholder {{project.class}}-placeholder"
-  ng-click="showBlock(project.class);"
+  ng-click="project.external? windowOpen(project.link, project.class) : showBlock(project.class);"
   ng-repeat="project in projects">
   <div class="block-page-wrapper {{project.class}}-wrapper">
     <div class="block-page {{project.class}}">
       <div class="page-center">
         <div class="page-header-wrapper">
-          <h2 class="block-header">
-            {{project.title | uppercase}}
-          </h2>
-          <p class="block-description">
-            {{project.description}}
-          </p>
-          <div class="block-zoom-content {{project.class}}-zoom-content">
-            <div class="arrow-left back-arrow"
-              ng-click="hideBlock(project.class); $event.stopPropagation();"></div>
-            <p class="back-arrow" ng-click="hideBlock(project.class); $event.stopPropagation();">
-              back
-            </p>
+          <div>
+            <img class="project-logo" ng-src="{{imageDir+project.imgFile}}">
+            <div class="project-header">
+              <h2 class="block-header">
+                {{project.title | uppercase}}
+              </h2>
+              <p class="block-description">
+                {{project.description}}
+              </p>
+              <div class="block-zoom-content {{project.class}}-zoom-content">
+                <div class="arrow-left back-arrow"
+                  ng-click="hideBlock(project.class); $event.stopPropagation();"></div>
+                <p class="back-arrow" ng-click="hideBlock(project.class); $event.stopPropagation();">
+                  back
+                </p>
+              </div>
+            </div>
           </div>
           <div class="block-inner-content">
             <ng-include src="'/views/templates/'+project.class+'.html'"></ng-include>

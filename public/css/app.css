@@ -126,7 +126,8 @@ html, body, .view-container, .view-frame {
   height: 200px;
   margin: auto;
   margin-bottom: 30px;
-  overflow: hidden; }
+  overflow: hidden;
+  display: block; }
   .block-placeholder .block-page-wrapper {
     width: 700px;
     height: 200px;

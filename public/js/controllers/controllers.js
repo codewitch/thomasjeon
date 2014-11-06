@@ -9,6 +9,7 @@ TjAppControllers.controller('landingController', [
     $scope.socialShow1 = false;
     $scope.socialShow2 = false;
     $scope.params = $location.search();
+    $scope.imageDir = "images/";
 
     $scope.mainSections = [
       {'title': 'Resume', 'description': 'See what I\'ve been up to!', 'class': 'resume'},
@@ -29,14 +30,28 @@ TjAppControllers.controller('landingController', [
 
     $scope.zoomStack = new Array();
 
+    $scope.windowOpen = function(link, section){
+      //if block isnt on current screen, dont open link
+      var linkElement = $('.' + section + '-placeholder');
+      if( !$scope.zoomable(linkElement) )
+        return;
+      window.open(link);
+    };
+
+    //enlarges selected block, and moves away the rest
     $scope.showBlock = function(section){
       var zoomElement = $('.' + section + '-placeholder');
       var upElements = zoomElement.prevAll();
       var downElements = zoomElement.nextAll();
 
+      //if already zoomed in, dont do anything
       if( $scope.zoomContains(zoomElement.children()) ){
         return;
       }
+
+      //if block isnt on current screen, dont zoom
+      if( !$scope.zoomable(zoomElement) )
+        return;
 
       upElements.each(function(){
         $scope.hideBlockUp($(this));
@@ -50,6 +65,7 @@ TjAppControllers.controller('landingController', [
 
     };
 
+    //shrinks the selected block and brings back the other content
     $scope.hideBlock = function(section){
       var zoomElement = $('.' + section + '-placeholder');
       var upElements = zoomElement.prevAll();
@@ -138,7 +154,12 @@ TjAppControllers.controller('landingController', [
       console.log('zoomin');
 
       element.find('.block-zoom-content').first().fadeTo(500, 1, 'linear');
-      $scope.zoomStack.push({top: element.offset().top, element: element});
+      $scope.zoomStack.push({
+        top: element.offset().top,
+        scroll: $(document).scrollTop(),
+        element: element
+      });
+
       $animate.addClass(element, 'zoom-in', {
         from:{
           top: element.offset().top + 'px',
@@ -165,6 +186,9 @@ TjAppControllers.controller('landingController', [
     $scope.zoomBlockOut = function(element){
       console.log('zoomout');
       element.find('.block-zoom-content').first().fadeTo(500, 0, 'linear');
+
+      var popElement = $scope.zoomStack.pop();
+
       $animate.removeClass(element, 'zoom-in', {
         from: {
           top: '0px',
@@ -174,7 +198,7 @@ TjAppControllers.controller('landingController', [
           width: element.parent().width() + 'px',
           height: element.parent().height() + 'px',
           overflow: 'hidden',
-          top: $scope.zoomStack.pop().top + 'px',
+          top: popElement.top + 'px',
           left: ($(window).width()-element.parent().width())/2 + 'px'
         }
       }).then(function(){
@@ -185,6 +209,8 @@ TjAppControllers.controller('landingController', [
           top: ''
         });
       });
+
+      $(document).scrollTop(popElement.scroll);
     }
 
     var hideUpLength = function(element){
@@ -195,6 +221,7 @@ TjAppControllers.controller('landingController', [
       return $(window).height() - element.offset().top + $(document).scrollTop();
     };
 
+    //checks if element has been zoomed in
     $scope.zoomContains = function(element){
       for (var i=0;i<$scope.zoomStack.length;i++){
         if($($scope.zoomStack[i].element).attr('class') == element.attr('class')){
@@ -204,7 +231,9 @@ TjAppControllers.controller('landingController', [
       return false;
     };
 
+    //checks if element is last one to be zoomed in
     $scope.zoomContainsTop = function(element){
+      //if stack is empty
       if($scope.zoomStack.length < 1)
         return false;
       var elementClass = element.attr('class');
@@ -215,5 +244,28 @@ TjAppControllers.controller('landingController', [
       return false;
     };
 
+    //checks if the element is in zoom range
+    $scope.zoomable = function(element){
+      //get children of last zoomed element, and see if the elemet is a direct child
+
+      var children = [];
+
+      //if stack is empty
+      if($scope.zoomStack.length < 1){
+        //is element a child of the main parent?
+        children = $('.block-placeholder').first().parent().children();
+      }else{
+        //get children of last zoomed element
+        var currentZoomElement = $($scope.zoomStack[$scope.zoomStack.length-1].element);
+        children = currentZoomElement.find('.block-placeholder').first().parent().children();
+      }
+
+      for (var i=0;i<children.length;i++){
+        if($(children[i]).attr('class') == element.attr('class')){
+          return true;
+        }
+      }
+      return false;
+    };
 }]);
 

@@ -23,6 +23,10 @@
         .block-description{
           font-size: 7px;
         }
+
+        .block-zoom-content{
+          margin-top: 20px;
+        }
       }
     }
 
@@ -30,6 +34,16 @@
       color: $white;
     }
   }
+}
+
+.project-logo{
+  height: 100px;
+  margin-right: 20px;
+}
+
+.project-header{
+  display: inline-block;
+  vertical-align: top;
 }
 
 .zoom-in .block-page .block-inner-content .block-placeholder{
@@ -43,6 +57,11 @@
 
     .page-center{
       height: 200px;
+
+      .project-logo{
+        height: 200px;
+        margin-right: 40px
+      }
 
       .block-header{
         font-size: 30px;
