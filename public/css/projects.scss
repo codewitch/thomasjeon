@@ -1,0 +1,103 @@
+@import 'constants';
+
+.block-placeholder{
+
+  .block-placeholder{
+    width: 350px;
+    height: 100px;
+    margin-bottom: 15px;
+
+    .block-page-wrapper{
+      width: 350px;
+      height: 100px;
+
+      .page-center{
+        display: inline-block;
+
+        .block-header{
+          font-size: 15px;
+          margin-top: 41px;
+        }
+
+        .block-description{
+          font-size: 7px;
+        }
+
+        .block-zoom-content{
+          margin-top: 20px;
+        }
+      }
+    }
+
+    .block-page{
+      color: $white;
+    }
+  }
+}
+
+.project-logo{
+  height: 100px;
+  margin-right: 20px;
+}
+
+.project-header{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.zoom-in .block-page .block-inner-content .block-placeholder{
+  width: 700px;
+  height: 200px;
+  margin-bottom: 30px;
+
+  .block-page-wrapper{
+    width: 700px;
+    height: 200px;
+
+    .page-center{
+
+      .project-logo{
+        height: 200px;
+        margin-right: 40px
+      }
+
+      .block-header{
+        font-size: 30px;
+        margin-top: 70px;
+        margin-bottom: 10px;
+      }
+
+      .block-description{
+        font-size: 13px;
+      }
+
+      .project-content{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.dodo{
+  background-color: $dodo;
+}
+
+.money-tree{
+  background-color: $money-tree;
+}
+
+.splitlicious{
+  background-color: $splitlicious;
+}
+
+.lucas-weather{
+  background-color: $lucas-weather;
+}
+
+.venmo{
+  background-color: $venmo;
+}
+
+.venmosxsw2014{
+  background-color: $venmosxsw2014;
+}

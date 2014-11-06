@@ -1,0 +1,138 @@
+/*COLORS*/
+/*MIXINS*/
+/*ELEMENT CONSTANTS*/
+h1 {
+  font-size: 40px;
+  font-weight: 300; }
+
+h2 {
+  font-weight: 300;
+  font-size: 30px; }
+
+h3 {
+  font-weight: 500;
+  font-size: 20px; }
+
+p {
+  font-size: 13px;
+  font-weight: 400; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  text-decoration: none;
+  list-style: none; }
+
+button, label {
+  cursor: pointer; }
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+
+.btn-grey {
+  color: #ffffff;
+  background-color: #b6b6be; }
+
+input {
+  padding: 6px 12px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  border: 1px solid transparent; }
+
+.no-display {
+  display: none; }
+
+/*DISABLE DEFAULTS*/
+button {
+  border: 1px solid transparent;
+  background-color: transparent;
+  outline: none; }
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0; }
+
+.block-placeholder .block-placeholder {
+  width: 350px;
+  height: 100px;
+  margin-bottom: 15px; }
+  .block-placeholder .block-placeholder .block-page-wrapper {
+    width: 350px;
+    height: 100px; }
+    .block-placeholder .block-placeholder .block-page-wrapper .page-center {
+      display: inline-block; }
+      .block-placeholder .block-placeholder .block-page-wrapper .page-center .block-header {
+        font-size: 15px;
+        margin-top: 41px; }
+      .block-placeholder .block-placeholder .block-page-wrapper .page-center .block-description {
+        font-size: 7px; }
+      .block-placeholder .block-placeholder .block-page-wrapper .page-center .block-zoom-content {
+        margin-top: 20px; }
+  .block-placeholder .block-placeholder .block-page {
+    color: #ffffff; }
+
+.project-logo {
+  height: 100px;
+  margin-right: 20px; }
+
+.project-header {
+  display: inline-block;
+  vertical-align: top; }
+
+.zoom-in .block-page .block-inner-content .block-placeholder {
+  width: 700px;
+  height: 200px;
+  margin-bottom: 30px; }
+  .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper {
+    width: 700px;
+    height: 200px; }
+    .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .project-logo {
+      height: 200px;
+      margin-right: 40px; }
+    .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .block-header {
+      font-size: 30px;
+      margin-top: 70px;
+      margin-bottom: 10px; }
+    .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .block-description {
+      font-size: 13px; }
+    .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .project-content {
+      width: 100%; }
+
+.dodo {
+  background-color: #6c748c; }
+
+.money-tree {
+  background-color: #63b546; }
+
+.splitlicious {
+  background-color: #49ba6e; }
+
+.lucas-weather {
+  background-color: #8c73af; }
+
+.venmo {
+  background-color: #0884cc; }
+
+.venmosxsw2014 {
+  background-color: #e28045; }
+
+/*# sourceMappingURL=projects.css.map */

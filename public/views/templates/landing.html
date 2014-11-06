@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="css/{{params.version}}.css">
-<link rel="stylesheet" href="css/animations.css">
 <div class="landing-container">
 
   <div class="main-content">
@@ -14,44 +13,33 @@
       </div>
     </div>
 
-    <div class="block-placeholder resume-placeholder"
-      ng-click="showBlock('resume')">
-      <div class="block-page-wrapper resume-wrapper">
-        <div class="block-page resume">
-          <div class="arrow-left-white back-arrow"
-            ng-click="hideBlock('resume'); $event.stopPropagation();"></div>
-          <h2 class="block-header">
-            RESUME
-          </h2>
-          <img ng-src="{{resumeImg}}" class="resume-img block-inner-content">
-        </div>
-      </div>
-    </div>
-
-    <div class="block-placeholder projects-placeholder"
-      ng-click="showBlock('projects')">
-      <div class="block-page-wrapper projects-wrapper">
-        <div class="block-page projects">
-          <div class="arrow-left-grey back-arrow"
-            ng-click="hideBlock('projects'); $event.stopPropagation();"></div>
-          <h2 class="block-header">
-            PROJECTS
-          </h2>
-          <img ng-src="{{resumeImg}}" class="resume-img block-inner-content">
-        </div>
-      </div>
-    </div>
-
-    <div class="block-placeholder about-placeholder"
-      ng-click="showBlock('about')">
-      <div class="block-page-wrapper about-wrapper">
-        <div class="block-page about">
-          <div class="arrow-left-grey back-arrow"
-            ng-click="hideBlock('about'); $event.stopPropagation();"></div>
-          <h2 class="block-header">
-            ABOUT ME
-          </h2>
-          <img ng-src="{{resumeImg}}" class="resume-img block-inner-content">
+    <div class="block-placeholder {{section.class}}-placeholder"
+      ng-click="showBlock(section.class);"
+      ng-repeat="section in mainSections">
+      <div class="block-page-wrapper {{section.class}}-wrapper">
+        <div class="block-page {{section.class}}">
+          <div class="page-left">
+            <div class="page-header-wrapper">
+              <h2 class="block-header">
+                {{section.title | uppercase}}
+              </h2>
+              <div class="block-zoom-content {{section.class}}-zoom-content">
+                <p class="section-description">
+                  {{section.description}}
+                </p>
+                <div class="arrow-left back-arrow"
+                  ng-click="hideBlock(section.class); $event.stopPropagation();"></div>
+                <p class="back-arrow" ng-click="hideBlock(section.class); $event.stopPropagation();">
+                  back
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="page-right">
+            <div class="block-inner-content">
+              <ng-include src="'/views/templates/'+section.class+'.html'"></ng-include>
+            </div>
+          </div>
         </div>
       </div>
     </div>

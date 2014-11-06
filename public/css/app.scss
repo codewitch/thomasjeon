@@ -81,18 +81,44 @@ html, body, .view-container, .view-frame{
   margin: auto;
   margin-bottom: 30px;
   overflow: hidden;
+  display: block;
 
   .block-page-wrapper{
     width: 700px;
     height: 200px;
     overflow: hidden;
 
-    .block-header{
-      margin: 80px 70px 40px 0;
+    .page-left{
       display: inline-block;
-      vertical-align: top;
+      text-align: left;
+      width: 200px;
+
+      .page-header-wrapper{
+        display: inline-block;
+
+        .block-header{
+          margin-bottom: 20px;
+          margin-top: 82px;
+        }
+
+        .section-description{
+          margin-bottom: 20px
+          ;
+        }
+      }
     }
 
+    .page-right{
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+
+      .block-inner-content{
+        width: 100%;
+        margin-bottom: 40px;
+        margin-top: 40px;
+      }
+    }
   }
 
   .resume{
@@ -100,9 +126,7 @@ html, body, .view-container, .view-frame{
     color: $white;
 
     .resume-img{
-      width: 300px;
-      margin-bottom: 40px;
-      margin-top: 40px;
+      width: 100%;
     }
   }
 
@@ -110,10 +134,8 @@ html, body, .view-container, .view-frame{
     background-color: $white;
     color: $grey;
 
-    .block-inner-content{
-      width: 300px;
-      margin-bottom: 40px;
-      margin-top: 40px;
+    .arrow-left{
+      border-right-color: $grey;
     }
   }
 
@@ -122,30 +144,33 @@ html, body, .view-container, .view-frame{
     color: $white;
 
     .block-inner-content{
-      width: 300px;
+      width: 100%;
       margin-bottom: 40px;
       margin-top: 40px;
     }
   }
 }
 
-.arrow-left-white {
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 20px solid $white;
+.block-zoom-content{
+  opacity: 0;
+  text-align: center;
 }
 
-.arrow-left-grey {
+.arrow-left{
   width: 0;
   height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 20px solid $grey;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid $white;
 }
 
 .back-arrow{
   cursor: pointer;
-  position: absolute;
+  display: inline-block;
+}
+
+p.back-arrow{
+  line-height: 31px;
+  margin-left: 10px;
+  vertical-align: top;
 }

@@ -126,53 +126,67 @@ html, body, .view-container, .view-frame {
   height: 200px;
   margin: auto;
   margin-bottom: 30px;
-  overflow: hidden; }
+  overflow: hidden;
+  display: block; }
   .block-placeholder .block-page-wrapper {
     width: 700px;
     height: 200px;
     overflow: hidden; }
-    .block-placeholder .block-page-wrapper .block-header {
-      margin: 80px 70px 40px 0;
+    .block-placeholder .block-page-wrapper .page-left {
       display: inline-block;
-      vertical-align: top; }
+      text-align: left;
+      width: 200px; }
+      .block-placeholder .block-page-wrapper .page-left .page-header-wrapper {
+        display: inline-block; }
+        .block-placeholder .block-page-wrapper .page-left .page-header-wrapper .block-header {
+          margin-bottom: 20px;
+          margin-top: 82px; }
+        .block-placeholder .block-page-wrapper .page-left .page-header-wrapper .section-description {
+          margin-bottom: 20px; }
+    .block-placeholder .block-page-wrapper .page-right {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%; }
+      .block-placeholder .block-page-wrapper .page-right .block-inner-content {
+        width: 100%;
+        margin-bottom: 40px;
+        margin-top: 40px; }
   .block-placeholder .resume {
     background-color: #7ebae5;
     color: #ffffff; }
     .block-placeholder .resume .resume-img {
-      width: 300px;
-      margin-bottom: 40px;
-      margin-top: 40px; }
+      width: 100%; }
   .block-placeholder .projects {
     background-color: #ffffff;
     color: #b6b6be; }
-    .block-placeholder .projects .block-inner-content {
-      width: 300px;
-      margin-bottom: 40px;
-      margin-top: 40px; }
+    .block-placeholder .projects .arrow-left {
+      border-right-color: #b6b6be; }
   .block-placeholder .about {
     background-color: #f5cf33;
     color: #ffffff; }
     .block-placeholder .about .block-inner-content {
-      width: 300px;
+      width: 100%;
       margin-bottom: 40px;
       margin-top: 40px; }
 
-.arrow-left-white {
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 20px solid #ffffff; }
+.block-zoom-content {
+  opacity: 0;
+  text-align: center; }
 
-.arrow-left-grey {
+.arrow-left {
   width: 0;
   height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 20px solid #b6b6be; }
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #ffffff; }
 
 .back-arrow {
   cursor: pointer;
-  position: absolute; }
+  display: inline-block; }
+
+p.back-arrow {
+  line-height: 31px;
+  margin-left: 10px;
+  vertical-align: top; }
 
 /*# sourceMappingURL=app.css.map */
