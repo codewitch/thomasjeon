@@ -12,9 +12,9 @@ TjAppControllers.controller('landingController', [
     $scope.imageDir = "images/";
 
     $scope.mainSections = [
-      {'title': 'Resume', 'description': 'See what I\'ve been up to!', 'class': 'resume'},
+      {'title': 'About Me', 'description': 'Wanna know more about me?', 'class': 'about'},
       {'title': 'Projects', 'description': 'Here\'s some stuff I\'ve done!', 'class': 'projects'},
-      {'title': 'About Me', 'description': 'Wanna know more about me?', 'class': 'about'}
+      {'title': 'Resume', 'description': 'See what I\'ve been up to!', 'class': 'resume'},
     ];
 
     $scope.$on('$viewContentLoaded', function(){

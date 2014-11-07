@@ -152,7 +152,7 @@ html, body, .view-container, .view-frame {
         margin-bottom: 40px;
         margin-top: 40px; }
   .block-placeholder .resume {
-    background-color: #7ebae5;
+    background-color: #f5cf33;
     color: #ffffff; }
     .block-placeholder .resume .resume-img {
       width: 100%; }
@@ -162,7 +162,7 @@ html, body, .view-container, .view-frame {
     .block-placeholder .projects .arrow-left {
       border-right-color: #b6b6be; }
   .block-placeholder .about {
-    background-color: #f5cf33;
+    background-color: #7ebae5;
     color: #ffffff; }
     .block-placeholder .about .block-inner-content {
       width: 100%;
