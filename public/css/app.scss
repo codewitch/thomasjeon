@@ -56,9 +56,16 @@ html, body, .view-container, .view-frame{
     .social-link{
       padding: 0 10px;
       opacity: 1;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
 
-      svg{
+      svg, img{
         width: 16px;
+      }
+
+      img{
+        vertical-align: top;
       }
 
       &.ng-hide{
@@ -90,7 +97,6 @@ html, body, .view-container, .view-frame{
 
     .page-left{
       display: inline-block;
-      text-align: left;
       width: 200px;
 
       .page-header-wrapper{
@@ -111,7 +117,7 @@ html, body, .view-container, .view-frame{
     .page-right{
       display: inline-block;
       vertical-align: top;
-      width: 50%;
+      margin: 0 16px;
 
       .block-inner-content{
         width: 100%;
@@ -125,6 +131,9 @@ html, body, .view-container, .view-frame{
     background-color: $yellow;
     color: $white;
 
+    .page-right{
+      width: 50%;
+    }
     .resume-img{
       width: 100%;
     }
@@ -178,3 +187,6 @@ p.back-arrow{
   padding-left: 10px;
   vertical-align: top;
 }
+
+@import "projects";
+@import "animations";

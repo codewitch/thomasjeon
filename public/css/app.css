@@ -110,9 +110,14 @@ html, body, .view-container, .view-frame {
     height: 20px; }
     .header-container .social-link-wrapper .social-link {
       padding: 0 10px;
-      opacity: 1; }
-      .header-container .social-link-wrapper .social-link svg {
+      opacity: 1;
+      width: 16px;
+      height: 16px;
+      display: inline-block; }
+      .header-container .social-link-wrapper .social-link svg, .header-container .social-link-wrapper .social-link img {
         width: 16px; }
+      .header-container .social-link-wrapper .social-link img {
+        vertical-align: top; }
       .header-container .social-link-wrapper .social-link.ng-hide {
         opacity: 0; }
   .header-container .social-link.ng-hide-remove.ng-hide-remove-active {
@@ -134,7 +139,6 @@ html, body, .view-container, .view-frame {
     overflow: hidden; }
     .block-placeholder .block-page-wrapper .page-left {
       display: inline-block;
-      text-align: left;
       width: 200px; }
       .block-placeholder .block-page-wrapper .page-left .page-header-wrapper {
         display: inline-block; }
@@ -146,7 +150,7 @@ html, body, .view-container, .view-frame {
     .block-placeholder .block-page-wrapper .page-right {
       display: inline-block;
       vertical-align: top;
-      width: 50%; }
+      margin: 0 16px; }
       .block-placeholder .block-page-wrapper .page-right .block-inner-content {
         width: 100%;
         margin-bottom: 40px;
@@ -154,6 +158,8 @@ html, body, .view-container, .view-frame {
   .block-placeholder .resume {
     background-color: #f5cf33;
     color: #ffffff; }
+    .block-placeholder .resume .page-right {
+      width: 50%; }
     .block-placeholder .resume .resume-img {
       width: 100%; }
   .block-placeholder .projects {
@@ -190,5 +196,175 @@ p.back-arrow {
   line-height: 31px;
   padding-left: 10px;
   vertical-align: top; }
+
+/*COLORS*/
+/*MIXINS*/
+/*ELEMENT CONSTANTS*/
+h1 {
+  font-size: 40px;
+  font-weight: 300; }
+
+h2 {
+  font-weight: 300;
+  font-size: 30px; }
+
+h3 {
+  font-weight: 500;
+  font-size: 20px; }
+
+p {
+  font-size: 13px;
+  font-weight: 400; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  text-decoration: none;
+  list-style: none; }
+
+button, label {
+  cursor: pointer; }
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+
+.btn-grey {
+  color: #ffffff;
+  background-color: #b6b6be; }
+
+input {
+  padding: 6px 12px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  border: 1px solid transparent; }
+
+.no-display {
+  display: none; }
+
+/*DISABLE DEFAULTS*/
+button {
+  border: 1px solid transparent;
+  background-color: transparent;
+  outline: none; }
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0; }
+
+.block-placeholder .block-placeholder {
+  width: 350px;
+  height: 100px;
+  margin-bottom: 15px; }
+  .block-placeholder .block-placeholder .block-page-wrapper {
+    width: 350px;
+    height: 100px; }
+    .block-placeholder .block-placeholder .block-page-wrapper .page-center {
+      display: inline-block; }
+      .block-placeholder .block-placeholder .block-page-wrapper .page-center .block-header {
+        font-size: 15px;
+        margin-top: 37px; }
+      .block-placeholder .block-placeholder .block-page-wrapper .page-center .block-description {
+        font-size: 7px; }
+      .block-placeholder .block-placeholder .block-page-wrapper .page-center .block-zoom-content {
+        margin-top: 20px; }
+  .block-placeholder .block-placeholder .block-page {
+    color: #ffffff; }
+
+.project-logo {
+  height: 50px;
+  margin-right: 20px;
+  margin-top: 25px; }
+
+.project-header {
+  display: inline-block;
+  vertical-align: top; }
+
+.zoom-in .block-page .block-inner-content .block-placeholder {
+  width: 700px;
+  height: 200px;
+  margin-bottom: 30px; }
+  .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper {
+    width: 700px;
+    height: 200px; }
+    .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .project-logo {
+      height: 100px;
+      margin-right: 40px;
+      margin-top: 50px; }
+    .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .block-header {
+      font-size: 30px;
+      margin-top: 70px;
+      margin-bottom: 10px; }
+    .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .block-description {
+      font-size: 13px; }
+    .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .project-content {
+      width: 100%; }
+
+.dodo {
+  background-color: #6c748c; }
+
+.money-tree {
+  background-color: #63b546; }
+
+.splitlicious {
+  background-color: #49ba6e; }
+
+.lucas-weather {
+  background-color: #8c73af; }
+
+.venmo {
+  background-color: #0884cc; }
+
+.venmosxsw2014 {
+  background-color: #e28045; }
+
+.main-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0; }
+  .main-content .block-placeholder .block-page-wrapper {
+    position: absolute; }
+
+.zoom-in .block-page .page-left {
+  width: 380px;
+  text-align: center; }
+  .zoom-in .block-page .page-left .page-header-wrapper .block-header {
+    font-size: 40px;
+    margin-top: 150px; }
+.zoom-in .block-page .page-right {
+  margin: 0; }
+.zoom-in .block-page .block-inner-content {
+  max-width: 1000px; }
+
+.header-container.ng-hide-add.ng-hide-add-active,
+.header-container.ng-hide-remove.ng-hide-remove-active,
+.resume-img, .block-header, .page-left, .page-right, .block-placeholder,
+.zoom-in-add .block-page-wrapper, .zoom-in-remove .block-page-wrapper,
+.hide-up-add, .hide-up-remove, .hide-down-add, .hide-down-remove,
+.project-logo,
+.zoom-in-add, .zoom-in-remove {
+  -webkit-transition: 0.75s cubic-bezier(0, 0.38, 0.49, 1) all;
+  -moz-transition: 0.75s cubic-bezier(0, 0.38, 0.49, 1) all;
+  -o-transition: 0.75s cubic-bezier(0, 0.38, 0.49, 1) all;
+  transition: 0.75s cubic-bezier(0, 0.38, 0.49, 1) all; }
 
 /*# sourceMappingURL=app.css.map */
