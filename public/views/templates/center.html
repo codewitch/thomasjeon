@@ -10,8 +10,8 @@
                 {{section.description}}
               </p>
               <div class="arrow-left back-arrow {{section.class}}-arrow"
-                ng-click="hideBlock(section.class); $event.stopPropagation();"></div>
-              <p class="back-arrow" ng-click="hideBlock(section.class); $event.stopPropagation();">
+                ng-click="goBackRoute(); $event.stopPropagation();"></div>
+              <p class="back-arrow" ng-click="goBackRoute(); $event.stopPropagation();">
                 back
               </p>
             </div>
