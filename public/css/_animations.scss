@@ -17,7 +17,8 @@
   .block-page{
 
     .page-left{
-      width: 300px;
+      width: 380px;
+      text-align: center;
 
       .page-header-wrapper .block-header{
         font-size: 40px;
@@ -25,8 +26,11 @@
       }
     }
 
+    .page-right{
+      margin: 0;
+    }
+
     .block-inner-content{
-      min-width: 600px;
       max-width: 1000px;
     }
   }

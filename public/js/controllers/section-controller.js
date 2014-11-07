@@ -16,13 +16,13 @@ TjAppSectionControllers.controller('projectController', [
       {'title': 'Splitlicious', 'description': 'Split your billzz',
         'class': 'splitlicious', 'external': false, 'link': '',
         'imgFile': 'splitlicious.png'},
-      {'title': 'LucasWeather', 'description': 'Lucas knows the weather',
+      {'title': 'Lucas Weather', 'description': 'Lucas knows the weather',
         'class': 'lucas-weather', 'external': false, 'link': '',
         'imgFile': 'lucas.gif'},
       {'title': 'Venmo', 'description': 'Venmo homepage and Venmo donations',
         'class': 'venmo', 'external': false, 'link': '',
         'imgFile': 'venmo.png'},
-      {'title': 'VenmoSXSW 2014', 'description': 'Venmo stuff from SXSW that I created!',
+      {'title': 'Venmo SXSW 2014', 'description': 'Venmo stuff from SXSW that I created!',
         'class': 'venmosxsw2014', 'external': false, 'link': '',
         'imgFile': 'bull.png'}
     ];
