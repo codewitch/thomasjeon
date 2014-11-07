@@ -8,16 +8,19 @@ var TjApp = angular.module('TjApp', [
   'ngRoute'
 ]);
 
-TjApp.config(['$routeProvider',
-  function($routeProvider) {
+TjApp.config(['$routeProvider', '$locationProvider',
+  function($routeProvider, $locationProvider) {
       $routeProvider.
         when('/', {
           templateUrl: 'views/templates/landing.html',
-          controller: 'landingController'
+          controller: 'landingController',
+          reloadOnSearch: false
         }).
         otherwise({
           redirectTo: '/'
         });
+
+      $locationProvider.html5Mode(true);
   }
 ]);
 

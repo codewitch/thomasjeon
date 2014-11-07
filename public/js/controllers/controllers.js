@@ -12,6 +12,8 @@ TjAppControllers.controller('landingController', [
     $scope.imageDir = "images/";
     $scope.viewDir = "/views/templates/";
 
+    $scope.currentSection = $scope.params.section? $scope.params.section : 'home';
+
     $scope.mainSections = [
       {'title': 'About Me', 'description': 'Wanna know more about me?', 'class': 'about', 'layout': 'center'},
       {'title': 'Projects', 'description': 'Here\'s some stuff I\'ve done!', 'class': 'projects', 'layout': 'divide'},
@@ -19,7 +21,10 @@ TjAppControllers.controller('landingController', [
     ];
 
     $scope.$on('$viewContentLoaded', function(){
+
       $timeout(function(){
+        //redirect depending on query
+        zoomToQuery($location.url());
         $scope.headerLineShow = true;
         $scope.socialShow1 = true;
       }, 300);
@@ -28,6 +33,15 @@ TjAppControllers.controller('landingController', [
         $scope.socialShow2 = true;
       }, 450);
     });
+
+    var zoomToQuery = function(uri){
+      console.log(parseArgs(uri));
+      var sections = parseArgs(uri);
+      sections.forEach(function(element, index, aray){
+        console.log(element);
+        $scope.showBlock(element);
+      });
+    };
 
     $scope.zoomStack = new Array();
 
@@ -39,8 +53,29 @@ TjAppControllers.controller('landingController', [
       window.open(link);
     };
 
+    $scope.$on('$locationChangeStart', function(event, nextUrl, currentUrl){
+      var currentArgs = parseArgs(currentUrl);
+      var nextArgs = parseArgs(nextUrl);
+
+      if(nextArgs.length > currentArgs.length){
+        $scope.showBlock(nextArgs[nextArgs.length-1]);
+      }else{
+        $scope.hideBlock(currentArgs[currentArgs.length-1]);
+      }
+      $scope.currentSection = nextArgs[nextArgs.length-1];
+    });
+
+    $scope.changeSearch = function(key, value){
+      $location.search(key, value);
+    };
+
+    $scope.goBackRoute = function(){
+      window.history.back();
+    };
+
     //enlarges selected block, and moves away the rest
     $scope.showBlock = function(section){
+
       var zoomElement = $('.' + section + '-placeholder');
       var upElements = zoomElement.prevAll();
       var downElements = zoomElement.nextAll();
@@ -68,6 +103,7 @@ TjAppControllers.controller('landingController', [
 
     //shrinks the selected block and brings back the other content
     $scope.hideBlock = function(section){
+
       var zoomElement = $('.' + section + '-placeholder');
       var upElements = zoomElement.prevAll();
       var downElements = zoomElement.nextAll();
@@ -154,12 +190,15 @@ TjAppControllers.controller('landingController', [
     $scope.zoomBlockIn = function(element){
       console.log('zoomin');
 
-      element.find('.block-zoom-content').first().fadeTo(500, 1, 'linear');
+      element.find('.block-zoom-content').first().fadeIn(500, 'linear');
+
       $scope.zoomStack.push({
         top: element.offset().top,
         scroll: $(document).scrollTop(),
         element: element
       });
+
+      element.parent().removeClass('cursor-pointer');
 
       $animate.addClass(element, 'zoom-in', {
         from:{
@@ -186,7 +225,7 @@ TjAppControllers.controller('landingController', [
 
     $scope.zoomBlockOut = function(element){
       console.log('zoomout');
-      element.find('.block-zoom-content').first().fadeTo(500, 0, 'linear');
+      element.find('.block-zoom-content').first().fadeOut(500, 'linear');
 
       var popElement = $scope.zoomStack.pop();
 
@@ -211,6 +250,7 @@ TjAppControllers.controller('landingController', [
         });
       });
 
+      element.parent().addClass('cursor-pointer');
       $(document).scrollTop(popElement.scroll);
     }
 
@@ -268,5 +308,16 @@ TjAppControllers.controller('landingController', [
       }
       return false;
     };
+
+    //returns the query arguements given a string query
+    var parseArgs = function(uri){
+      var args = [];
+      uri.replace(
+          new RegExp("([^?=&]+)(=([^&]*))", "g"),
+          function($0, $1, $2, $3) { args.push($3); }
+      );
+      return args;
+    };
+
 }]);
 

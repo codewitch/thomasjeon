@@ -1,11 +1,10 @@
-<link rel="stylesheet" href="css/{{params.version}}.css">
 <div class="landing-container">
 
   <div class="main-content">
     <div class="block-placeholder header-placeholder">
       <div class="header-container">
         <h1 class="header">
-          THOMAS, TOM & TOMMY
+          THOMAS C. JEON
         </h1>
         <div class="header-bottom-wrapper">
           <header-bottom></header-bottom>
@@ -13,8 +12,8 @@
       </div>
     </div>
 
-    <div class="block-placeholder {{section.class}}-placeholder"
-      ng-click="showBlock(section.class);"
+    <div class="block-placeholder {{section.class}}-placeholder cursor-pointer"
+      ng-click="changeSearch('section',section.class);"
       ng-repeat="section in mainSections">
       <div class="block-page-wrapper {{section.class}}-wrapper">
         <div class="block-page {{section.class}}">
