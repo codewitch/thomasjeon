@@ -27,7 +27,7 @@
                 <p class="section-description">
                   {{section.description}}
                 </p>
-                <div class="arrow-left back-arrow"
+                <div class="arrow-left back-arrow {{section.class}}-arrow"
                   ng-click="hideBlock(section.class); $event.stopPropagation();"></div>
                 <p class="back-arrow" ng-click="hideBlock(section.class); $event.stopPropagation();">
                   back

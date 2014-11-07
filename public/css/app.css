@@ -159,7 +159,7 @@ html, body, .view-container, .view-frame {
   .block-placeholder .projects {
     background-color: #ffffff;
     color: #b6b6be; }
-    .block-placeholder .projects .arrow-left {
+    .block-placeholder .projects .projects-arrow {
       border-right-color: #b6b6be; }
   .block-placeholder .about {
     background-color: #7ebae5;
@@ -188,7 +188,7 @@ html, body, .view-container, .view-frame {
 
 p.back-arrow {
   line-height: 31px;
-  margin-left: 10px;
+  padding-left: 10px;
   vertical-align: top; }
 
 /*# sourceMappingURL=app.css.map */

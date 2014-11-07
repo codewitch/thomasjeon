@@ -134,7 +134,7 @@ html, body, .view-container, .view-frame{
     background-color: $white;
     color: $grey;
 
-    .arrow-left{
+    .projects-arrow{
       border-right-color: $grey;
     }
   }
@@ -175,6 +175,6 @@ html, body, .view-container, .view-frame{
 
 p.back-arrow{
   line-height: 31px;
-  margin-left: 10px;
+  padding-left: 10px;
   vertical-align: top;
 }
