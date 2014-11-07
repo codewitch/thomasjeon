@@ -18,28 +18,7 @@
       ng-repeat="section in mainSections">
       <div class="block-page-wrapper {{section.class}}-wrapper">
         <div class="block-page {{section.class}}">
-          <div class="page-left">
-            <div class="page-header-wrapper">
-              <h2 class="block-header">
-                {{section.title | uppercase}}
-              </h2>
-              <div class="block-zoom-content {{section.class}}-zoom-content">
-                <p class="section-description">
-                  {{section.description}}
-                </p>
-                <div class="arrow-left back-arrow {{section.class}}-arrow"
-                  ng-click="hideBlock(section.class); $event.stopPropagation();"></div>
-                <p class="back-arrow" ng-click="hideBlock(section.class); $event.stopPropagation();">
-                  back
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="page-right">
-            <div class="block-inner-content">
-              <ng-include src="'/views/templates/'+section.class+'.html'"></ng-include>
-            </div>
-          </div>
+          <ng-include src="viewDir + section.layout + '.html'"></ng-include>
         </div>
       </div>
     </div>

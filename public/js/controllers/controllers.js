@@ -10,11 +10,12 @@ TjAppControllers.controller('landingController', [
     $scope.socialShow2 = false;
     $scope.params = $location.search();
     $scope.imageDir = "images/";
+    $scope.viewDir = "/views/templates/";
 
     $scope.mainSections = [
-      {'title': 'About Me', 'description': 'Wanna know more about me?', 'class': 'about'},
-      {'title': 'Projects', 'description': 'Here\'s some stuff I\'ve done!', 'class': 'projects'},
-      {'title': 'Resume', 'description': 'See what I\'ve been up to!', 'class': 'resume'},
+      {'title': 'About Me', 'description': 'Wanna know more about me?', 'class': 'about', 'layout': 'center'},
+      {'title': 'Projects', 'description': 'Here\'s some stuff I\'ve done!', 'class': 'projects', 'layout': 'divide'},
+      {'title': 'Resume', 'description': 'See what I\'ve been up to!', 'class': 'resume', 'layout': 'divide'},
     ];
 
     $scope.$on('$viewContentLoaded', function(){
@@ -25,7 +26,7 @@ TjAppControllers.controller('landingController', [
 
       $timeout(function(){
         $scope.socialShow2 = true;
-      }, 400);
+      }, 450);
     });
 
     $scope.zoomStack = new Array();
