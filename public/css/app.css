@@ -330,7 +330,7 @@ h1, h2, h3, p {
     .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .project-content {
       width: 100%; }
       .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .project-content .mobile-width {
-        width: 49%;
+        max-width: 500px;
         display: inline-block; }
 
 .dodo {
