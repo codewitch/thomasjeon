@@ -93,7 +93,7 @@ html, body, .view-container, .view-frame {
   .header-container .divider-container {
     height: 2px; }
   .header-container .divider-white {
-    width: 550px;
+    width: 420px;
     margin: auto;
     border-bottom: 2px solid;
     color: #ffffff; }
@@ -126,13 +126,19 @@ html, body, .view-container, .view-frame {
     -o-transition: 0.5s linear all;
     transition: 0.5s linear all; }
 
+.block-placeholder.header-placeholder {
+  box-shadow: none; }
+
 .block-placeholder {
   width: 700px;
   height: 200px;
   margin: auto;
   margin-bottom: 30px;
   overflow: hidden;
-  display: block; }
+  display: block;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
+  .block-placeholder.cursor-pointer {
+    cursor: pointer; }
   .block-placeholder .block-page-wrapper {
     width: 700px;
     height: 200px;
@@ -177,9 +183,22 @@ html, body, .view-container, .view-frame {
     .block-placeholder .about .about-gif {
       width: 350px; }
 
+.block-zoom-content-placeholder {
+  min-height: 34px; }
+
 .block-zoom-content {
-  opacity: 0;
+  display: none;
   text-align: center; }
+
+.download-link {
+  display: block;
+  margin-top: 80px; }
+
+.app-store-img {
+  display: block;
+  width: 150px;
+  margin: auto;
+  margin-bottom: 20px; }
 
 .arrow-left {
   width: 0;
@@ -298,6 +317,9 @@ h1, h2, h3, p {
   display: inline-block;
   vertical-align: top; }
 
+.project-tools {
+  margin-bottom: 40px; }
+
 .zoom-in .block-page .block-inner-content .block-placeholder {
   width: 700px;
   height: 200px;
@@ -317,6 +339,9 @@ h1, h2, h3, p {
       font-size: 13px; }
     .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .project-content {
       width: 100%; }
+      .zoom-in .block-page .block-inner-content .block-placeholder .block-page-wrapper .page-center .project-content .mobile-width {
+        max-width: 500px;
+        display: inline-block; }
 
 .dodo {
   background-color: #6c748c; }

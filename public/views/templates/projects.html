@@ -1,6 +1,6 @@
 <div ng-controller="projectController">
-<div class="block-placeholder {{project.class}}-placeholder"
-  ng-click="project.external? windowOpen(project.link, project.class) : showBlock(project.class);"
+<div class="block-placeholder {{project.class}}-placeholder cursor-pointer"
+  ng-click="project.external? windowOpen(project.link, project.class) : changeSearch('project',project.class); $event.stopPropagation();"
   ng-repeat="project in projects">
   <div class="block-page-wrapper {{project.class}}-wrapper">
     <div class="block-page {{project.class}}">
@@ -15,12 +15,14 @@
               <p class="block-description">
                 {{project.description}}
               </p>
-              <div class="block-zoom-content {{project.class}}-zoom-content">
-                <div class="arrow-left back-arrow"
-                  ng-click="hideBlock(project.class); $event.stopPropagation();"></div>
-                <p class="back-arrow" ng-click="hideBlock(project.class); $event.stopPropagation();">
-                  back
-                </p>
+              <div class="block-zoom-content-placeholder">
+                <div class="block-zoom-content {{project.class}}-zoom-content">
+                  <div class="arrow-left back-arrow"
+                    ng-click="goBackRoute(); $event.stopPropagation();"></div>
+                  <p class="back-arrow" ng-click="goBackRoute(); $event.stopPropagation();">
+                    back
+                  </p>
+                </div>
               </div>
             </div>
           </div>
