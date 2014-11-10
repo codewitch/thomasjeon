@@ -1,6 +1,6 @@
 <div ng-controller="projectController">
 <div class="block-placeholder {{project.class}}-placeholder cursor-pointer"
-  ng-click="project.external? windowOpen(project.link, project.class) : changeSearch('project',project.class); $event.stopPropagation();"
+  ng-click="project.external? windowOpen(project.link, project.class) : changeSearch('project',project.class);"
   ng-repeat="project in projects">
   <div class="block-page-wrapper {{project.class}}-wrapper">
     <div class="block-page {{project.class}}">

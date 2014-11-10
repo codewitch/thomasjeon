@@ -66,6 +66,12 @@ TjAppControllers.controller('landingController', [
     });
 
     $scope.changeSearch = function(key, value){
+      var zoomElement = $('.' + value + '-placeholder');
+      //if already zoomed in, dont do anything
+      //if block isnt on current screen, dont zoom
+      if( $scope.zoomContains(zoomElement.children()) || !$scope.zoomable(zoomElement) ){
+        return;
+      }
       $location.search(key, value);
     };
 
